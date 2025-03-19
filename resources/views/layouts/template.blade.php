@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ config('app.name', 'PWL Laravel Starter Code') }}</title>
 
-    <meta name="csrf-token" content="{{ csrf_token() }}"> <!-- Untuk mengirimkan token Laravel CSRF pada setiap request ajax -->
+    <meta name="csrf-token" content="{{ csrf_token()}}"> <!-- Untuk mengirimkan token Laravel CSRF pada setiap request ajax-->
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -18,7 +18,7 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('adminlte/dist/css/adminlte.min.css') }}">
 
-    @stack('css') <!-- Digunakan untuk memanggil custom CSS dari perintah push('css') pada masing-masing view -->
+    @stack('css') <!-- Digunakan untuk memanggil custom css dari perintah push('css') pada masing-masing view-->
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
@@ -77,9 +77,9 @@
 <!-- AdminLTE App -->
 <script src="{{ asset('adminlte/dist/js/adminlte.min.js') }}"></script>
 <script>
-  // Untuk mengirimkan token Laravel CSRF pada setiap request ajax
-  $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
-</script>
-@stack('js') <!-- Digunakan untuk memanggil custom js dari perintah push('js') pada masing-masing view -->
+    // Untuk mengirimkan token Laravel CSRF pada setiap request ajax
+    $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
+  </script>
+  @stack('js') <!-- Digunakan untuk memanggil custom js dari perintah push('js') pada masing-masing view -->
 </body>
 </html>

@@ -33,36 +33,36 @@
         var dataUser = $('#table_user').DataTable({
             serverSide: true,
             ajax: {
-                "url": "{{ url('user/list') }}",
-                "dataType": "json",
-                "type": "POST"
+                url: "{{ url('user/list') }}",
+                dataType: "json",
+                type: "POST"
             },
             columns: [
-                { 
+                {
                     data: "DT_RowIndex",
                     className: "text-center",
                     orderable: false,
                     searchable: false
                 },
-                { 
+                {
                     data: "username",
                     className: "",
                     orderable: true,
                     searchable: true
                 },
-                { 
+                {
                     data: "nama",
                     className: "",
                     orderable: true,
                     searchable: true
                 },
-                { 
+                {
                     data: "level.level_nama",
                     className: "",
                     orderable: false,
                     searchable: false
                 },
-                { 
+                {
                     data: "aksi",
                     className: "",
                     orderable: false,
